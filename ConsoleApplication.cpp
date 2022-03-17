@@ -67,6 +67,7 @@ int main()
             cout << endl << "Your choice: "; cin >> sqrtCount;
             if (sqrtCount == 1)
             {
+                continue;
             }
             else
             {
