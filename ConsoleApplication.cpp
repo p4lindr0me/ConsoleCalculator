@@ -20,7 +20,7 @@ int main()
     cout << "This is a simple console-based calculator written in C++." << endl;
     cout << "1: Simple calculations (Format: a+b | a-b | a*b | a/b)" << endl;
     cout << "2: Square root of n" << endl;
-    cout << "Your choice: "; cin >> calc;
+    cout << endl << "Your choice: "; cin >> calc;
 
     if (calc == 1)
     {
@@ -56,10 +56,23 @@ int main()
     }
     else
     {
-    cout << "Please enter a number to get its square root: "; cin >> sqrtNum;
-    sqrtResult = sqrt(sqrtNum);
+        int sqrtCount = 1;
+        while (sqrtCount <= 1)
+        {
+            cout << "Please enter a number to get its square root: "; cin >> sqrtNum;
+            sqrtResult = sqrt(sqrtNum);
 
-    cout << "The square root of " << sqrtNum << " is " << sqrtResult << endl;
+            cout << endl << "The square root of " << sqrtNum << " is " << sqrtResult << endl << endl;
+            cout << "Do you wish to perform another calculation? (YES: 1 | NO: 2)" << endl;
+            cout << endl << "Your choice: "; cin >> sqrtCount;
+            if (sqrtCount == 1)
+            {
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
     }
-
 }
